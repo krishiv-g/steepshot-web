@@ -36,7 +36,7 @@
     position: absolute;
     width: 18px;
     height: 16px;
-    background: url('/images/heart_notification.svg') center no-repeat;
+    background: url('src/images/heart_notification.svg') center no-repeat;
     bottom: -1px;
     left: -6px;
 }

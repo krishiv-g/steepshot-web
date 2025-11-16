@@ -98,24 +98,25 @@ class PostContextMenu extends React.Component {
 	}
 
 	setButtonsOptions(props) {
+		const publicUrl = process.env.PUBLIC_URL || '';
 		let BUTTONS_OPTIONS = [
 			{
-				img: '/images/postContextMenu/shareTrue.svg',
-				revertImg: '/images/postContextMenu/shareFalse.svg',
+				img: publicUrl + '/images/postContextMenu/shareTrue.svg',
+				revertImg: publicUrl + '/images/postContextMenu/shareFalse.svg',
 				alt: 'Share',
 				callback: this.sharePost.bind(this),
 				hasDelimiter: true,
 			}, {
-				img: '/images/postContextMenu/copyTrue.svg',
-				revertImg: '/images/postContextMenu/copyFalse.svg',
+				img: publicUrl + '/images/postContextMenu/copyTrue.svg',
+				revertImg: publicUrl + '/images/postContextMenu/copyFalse.svg',
 				alt: 'Copy link',
 				callback: this.copyLink.bind(this),
 				hasDelimiter: false,
 			},
 			// TODO uncomment when will be implemented embed
 			/*{
-				img: '/images/postContextMenu/embedTrue.svg',
-				revertImg: '/images/postContextMenu/embedFalse.svg',
+				img: publicUrl + '/images/postContextMenu/embedTrue.svg',
+				revertImg: publicUrl + '/images/postContextMenu/embedFalse.svg',
 				alt: 'Embed',
 				callback: this.embed.bind(this),
 				hasDelimiter: false,
@@ -128,15 +129,15 @@ class PostContextMenu extends React.Component {
 			tmp = [];
 			if (new Date(props.item['cashout_time']) > new Date()) {
 				tmp.push({
-					img: '/images/postContextMenu/editTrue.svg',
-					revertImg: '/images/postContextMenu/editFalse.svg',
+					img: publicUrl + '/images/postContextMenu/editTrue.svg',
+					revertImg: publicUrl + '/images/postContextMenu/editFalse.svg',
 					alt: 'Edit',
 					callback: this.editPost.bind(this),
 					hasDelimiter: true,
 				});
 				tmp.push({
-					img: '/images/postContextMenu/deleteTrue.svg',
-					revertImg: '/images/postContextMenu/deleteFalse.svg',
+					img: publicUrl + '/images/postContextMenu/deleteTrue.svg',
+					revertImg: publicUrl + '/images/postContextMenu/deleteFalse.svg',
 					alt: 'Delete',
 					callback: this.deletePost.bind(this),
 					hasDelimiter: true,
@@ -145,15 +146,15 @@ class PostContextMenu extends React.Component {
 		} else {
 			tmp = [
 				{
-					img: '/images/flagTrue.svg',
-					revertImg: '/images/flagFalse.svg',
+					img: publicUrl + '/images/flagTrue.svg',
+					revertImg: publicUrl + '/images/flagFalse.svg',
 					alt: 'Flag/Unflag',
 					callback: this.toggleFlag.bind(this),
 					hasDelimiter: true,
 				}, /* TODO uncomment when will be implemented hide
         {
-          img: '/images/postContextMenu/hideTrue.svg',
-          revertImg: '/images/postContextMenu/hideFalse.svg',
+          img: publicUrl + '/images/postContextMenu/hideTrue.svg',
+          revertImg: publicUrl + '/images/postContextMenu/hideFalse.svg',
           alt: 'Hide',
           callback: this.hidePost.bind(this),
           hasDelimiter: true,

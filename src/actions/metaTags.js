@@ -10,7 +10,7 @@ export function getDefaultTags(hostname, pathname) {
 		{property: 'og:title', content: "steepshot.io"},
 		{property: 'og:type', content: 'website'},
 		{property: 'og:url', content: hostname + pathname},
-		{property: 'og:image', content: hostname + '/images/steepshotLogo@2x.svg'}
+		{property: 'og:image', content: hostname + (process.env.PUBLIC_URL || '') + '/images/steepshotLogo@2x.svg'}
 	]
 }
 

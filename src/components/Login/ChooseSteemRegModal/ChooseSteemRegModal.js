@@ -8,15 +8,15 @@ class ChooseSteemRegModal extends React.Component {
 	render() {
 		let variantsArr = [
 			{
-				registrationService: 'Steemit', registrationServiceImage: '/images/chooseSteemRegModal/steem.png',
+				registrationService: 'Steemit', registrationServiceImage: (process.env.PUBLIC_URL || '') + '/images/chooseSteemRegModal/steem.png',
 				linkToRegistrationService: 'https://signup.steemit.com', free: true, instant: false
 			},
 			{
-				registrationService: 'Blocktrades', registrationServiceImage: '/images/chooseSteemRegModal/blocktrades.png',
+				registrationService: 'Blocktrades', registrationServiceImage: (process.env.PUBLIC_URL || '') + '/images/chooseSteemRegModal/blocktrades.png',
 				linkToRegistrationService: 'https://blocktrades.us/create-steem-account', free: false, instant: true
 			},
 			{
-				registrationService: 'SteemCreate', registrationServiceImage: '/images/chooseSteemRegModal/steemcreate.png',
+				registrationService: 'SteemCreate', registrationServiceImage: (process.env.PUBLIC_URL || '') + '/images/chooseSteemRegModal/steemcreate.png',
 				linkToRegistrationService: 'http://steemcreate.com', free: false, instant: true
 			}
 		];

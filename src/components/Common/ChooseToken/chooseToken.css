@@ -38,7 +38,7 @@
 }
 
 .choose-arrows_choose-token {
-    background: url('/images/promoteModal/select-arrows.svg') center no-repeat;
+    background: url('src/images/promoteModal/select-arrows.svg') center no-repeat;
     width: 8px;
     height: 16px;
 }

@@ -32,7 +32,7 @@
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    background: rgba(1, 1, 1, 0.1) url('/images/wallet/whitedots.png') no-repeat center;
+    background: rgba(1, 1, 1, 0.1) url('src/images/wallet/whitedots.png') no-repeat center;
     background-size: 14px 4px;
     cursor: pointer;
     display: flex;
@@ -41,7 +41,7 @@
 }
 
 .actions-btn_widget-token:hover, .actions-btn_widget-token.active {
-    background: #ffffff url('/images/wallet/blackdots.png') no-repeat center;
+    background: #ffffff url('src/images/wallet/blackdots.png') no-repeat center;
     background-size: 14px 4px;
 }
 

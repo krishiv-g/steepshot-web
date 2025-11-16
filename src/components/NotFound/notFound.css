@@ -1,6 +1,6 @@
 .for-background_not-found {
     height: calc(100vh - 120px);
-    background: url('/images/notFound/mountains-background.svg') center no-repeat;
+    background: url('src/images/notFound/mountains-background.svg') center no-repeat;
     background-size: cover;
     min-height: 300px;
 }
@@ -45,7 +45,7 @@
 
 @media (max-width: 650px) {
     .for-background_not-found {
-        background: url('/images/notFound/mountains-background.svg') center bottom no-repeat;
+        background: url('src/images/notFound/mountains-background.svg') center bottom no-repeat;
         background-size: 100vw;
     }
 

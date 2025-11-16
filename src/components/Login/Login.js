@@ -16,16 +16,16 @@ import SteemConnect from '../../services/SteemConnect';
 import GrayInput from '../Common/GrayInput/GrayInput';
 
 const galleryImages = [
-	'/images/login/1.png',
-	'/images/login/2.png',
-	'/images/login/3.png',
-	'/images/login/4.png',
-	'/images/login/5.png',
-	'/images/login/6.png',
-	'/images/login/7.png',
-	'/images/login/8.png',
-	'/images/login/9.png',
-	'/images/login/10.png'
+	(process.env.PUBLIC_URL || '') + '/images/login/1.png',
+	(process.env.PUBLIC_URL || '') + '/images/login/2.png',
+	(process.env.PUBLIC_URL || '') + '/images/login/3.png',
+	(process.env.PUBLIC_URL || '') + '/images/login/4.png',
+	(process.env.PUBLIC_URL || '') + '/images/login/5.png',
+	(process.env.PUBLIC_URL || '') + '/images/login/6.png',
+	(process.env.PUBLIC_URL || '') + '/images/login/7.png',
+	(process.env.PUBLIC_URL || '') + '/images/login/8.png',
+	(process.env.PUBLIC_URL || '') + '/images/login/9.png',
+	(process.env.PUBLIC_URL || '') + '/images/login/10.png'
 ];
 
 class Login extends React.Component {

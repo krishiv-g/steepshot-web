@@ -34,7 +34,7 @@
     transform: translate(-50%, -50%);
     width: 12px;
     height: 12px;
-    background: url(/images/sprite_svg1910.svg) no-repeat 3% 99.8%;
+    background: url(src/images/sprite_svg1910.svg) no-repeat 3% 99.8%;
 }
 
 .content_menu {

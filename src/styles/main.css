@@ -158,22 +158,22 @@ a {
     font-family: OpenSans-Regular;
     font-style: normal;
     font-weight: 400;
-    src: local("OpenSans Regular"), local("OpenSans-Regular"), url('/fonts/OpenSans-Regular.woff') format("woff"), url('/fonts/OpenSans-Regular.woff2') format("woff2")
+    src: local("OpenSans Regular"), local("OpenSans-Regular"), url('src/fonts/OpenSans-Regular.woff') format("woff"), url('src/fonts/OpenSans-Regular.woff2') format("woff2")
 }
 
 @font-face {
     font-family: OpenSans-Bold;
     font-style: normal;
     font-weight: 400;
-    src: local("OpenSans Bold"), local("OpenSans-Bold"), url('/fonts/OpenSans-Bold.woff') format("woff"),
-    url('/fonts/OpenSans-Bold.woff2') format("woff2")
+    src: local("OpenSans Bold"), local("OpenSans-Bold"), url('src/fonts/OpenSans-Bold.woff') format("woff"),
+    url('src/fonts/OpenSans-Bold.woff2') format("woff2")
 }
 
 @font-face {
     font-family: OpenSans-Italic;
     font-style: normal;
     font-weight: 400;
-    src: local("OpenSans Italic"), local("OpenSans-Italic"), url('/fonts/OpenSans-Italic.woff') format("woff"), url('/fonts/OpenSans-Italic.woff2') format("woff2")
+    src: local("OpenSans Italic"), local("OpenSans-Italic"), url('src/fonts/OpenSans-Italic.woff') format("woff"), url('src/fonts/OpenSans-Italic.woff2') format("woff2")
 }
 
 .open-i {
@@ -184,14 +184,14 @@ a {
     font-family: OpenSans-Light;
     font-style: normal;
     font-weight: 400;
-    src: local("OpenSans Light"), local("OpenSans-Light"), url('/fonts/OpenSans-Light.woff') format("woff"), url('/fonts/OpenSans-Light.woff2') format("woff2")
+    src: local("OpenSans Light"), local("OpenSans-Light"), url('src/fonts/OpenSans-Light.woff') format("woff"), url('src/fonts/OpenSans-Light.woff2') format("woff2")
 }
 
 @font-face {
     font-family: OpenSans-SemiBold;
     font-style: normal;
     font-weight: 400;
-    src: local("OpenSans SemiBold"), local("OpenSans-SemiBold"), url('/fonts/OpenSans-SemiBold.woff') format("woff"), url('/fonts/OpenSans-SemiBold.woff2') format("woff2")
+    src: local("OpenSans SemiBold"), local("OpenSans-SemiBold"), url('src/fonts/OpenSans-SemiBold.woff') format("woff"), url('src/fonts/OpenSans-SemiBold.woff2') format("woff2")
 }
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -533,12 +533,12 @@ i {
 [class*=sp-]:before {
     content: '';
     display: inline-block;
-    background-image: url('/images/sprite.png')
+    background-image: url('src/images/sprite.png')
 }
 
 @font-face {
     font-family: sprite;
-    src: url('/fonts/sprite.woff2') format("woff2"), url('/fonts/sprite.woff') format("woff")
+    src: url('src/fonts/sprite.woff2') format("woff2"), url('src/fonts/sprite.woff') format("woff")
 }
 
 .ic-arrow:before {
@@ -589,12 +589,12 @@ i {
     content: ' ';
     display: inline-block;
     font-size: 10px;
-    background: url('/images/sprite_svg1910.svg') no-repeat;
+    background: url('src/images/sprite_svg1910.svg') no-repeat;
     background-size: 4.4em 47.2em;
 }
 
 .no-svg [class*=ic2-]:before {
-    background-image: url('/images/sprite_svg1910.svg');
+    background-image: url('src/images/sprite_svg1910.svg');
 }
 
 .block-in-body_header, .g-header {
@@ -977,7 +977,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     content: ' ';
     display: inline-block;
     font-size: 10px;
-    background: url('/images/sprite_svg1910.svg') -.2em -30.599999999999998em no-repeat;
+    background: url('src/images/sprite_svg1910.svg') -.2em -30.599999999999998em no-repeat;
     background-size: 4.4em 47.2em;
     width: 1em;
     height: 1em;
@@ -985,7 +985,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .user-panel .search .lnk-search:before {
-    background-image: url('/images/sprite_svg1910.svg')
+    background-image: url('src/images/sprite_svg1910.svg')
 }
 
 .user-panel .menu {
@@ -1100,7 +1100,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 .search-panel .wrap-panel:before {
     content: ' ';
     font-size: 10px;
-    background: url('/images/sprite_svg1910.svg') -.2em -30.599999999999998em no-repeat;
+    background: url('src/images/sprite_svg1910.svg') -.2em -30.599999999999998em no-repeat;
     background-size: 4.4em 47.2em;
     width: 1em;
     height: 1em;

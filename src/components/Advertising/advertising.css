@@ -14,7 +14,7 @@
     position: fixed;
     top: 0;
     z-index: 12;
-    background: url('/images/advertising/adverting-background.png') center;
+    background: url('src/images/advertising/adverting-background.png') center;
     background-size: 200px 200px;
 }
 
@@ -62,11 +62,11 @@
 .close_advertising {
     width: 16px;
     height: 16px;
-    background: url('/images/sprite_svg1910.svg') -2px -76px no-repeat;
+    background: url('src/images/sprite_svg1910.svg') -2px -76px no-repeat;
 }
 
 .close-wrapper_advertising:hover .close_advertising {
-    background: url('/images/sprite_svg1910.svg') -2px -56px no-repeat;
+    background: url('src/images/sprite_svg1910.svg') -2px -56px no-repeat;
 }
 
 @media (max-width: 740px) {

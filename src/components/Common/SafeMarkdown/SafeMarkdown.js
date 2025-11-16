@@ -51,7 +51,7 @@ const SafeMarkdown = ({ content, allowHtml = false, className = '' }) => {
                 alt={props.alt || ''}
                 loading="lazy"
                 onError={(e) => {
-                  e.target.src = '/images/noimage.jpg';
+                  e.target.src = (process.env.PUBLIC_URL || '') + '/images/noimage.jpg';
                 }}
               />
             );

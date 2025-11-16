@@ -129,7 +129,7 @@
     transform: translate(-50%, -50%);
     width: 12px;
     height: 12px;
-    background: url(/images/sprite_svg1910.svg) no-repeat 3% 99.8%;
+    background: url(src/images/sprite_svg1910.svg) no-repeat 3% 99.8%;
 }
 
 .cont-close-btn_pos-mod {
@@ -322,7 +322,7 @@
     left: 10px;
     width: 70px;
     height: 70px;
-    background: url('/images/arrow-modal-left.svg') center no-repeat;
+    background: url('src/images/arrow-modal-left.svg') center no-repeat;
     transform: translateY(-50%);
     cursor: pointer;
     border-radius: 50%;
@@ -335,7 +335,7 @@
     right: 10px;
     width: 70px;
     height: 70px;
-    background: url('/images/arrow-modal-right.svg') center no-repeat;
+    background: url('src/images/arrow-modal-right.svg') center no-repeat;
     transform: translateY(-50%);
     cursor: pointer;
     border-radius: 50%;
@@ -343,11 +343,11 @@
 }
 
 .arrow-left-full-screen_post-mod:hover {
-    background: rgba(255, 255, 255, .08) url('/images/arrow-modal-left.svg') center no-repeat;
+    background: rgba(255, 255, 255, .08) url('src/images/arrow-modal-left.svg') center no-repeat;
 }
 
 .arrow-right-full-screen_post-mod:hover {
-    background: rgba(255, 255, 255, .08) url('/images/arrow-modal-right.svg') center no-repeat;
+    background: rgba(255, 255, 255, .08) url('src/images/arrow-modal-right.svg') center no-repeat;
 }
 
 .full-screen-button_pos-mod {

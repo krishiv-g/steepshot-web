@@ -43,10 +43,10 @@ const SubscribingBell = styled.div`
 	align-items: center;
 	background-size: 16px 18px;
 	border: solid 1px #e7e7e7;
-	background: url('/images/userProfile/subscribe.svg') no-repeat 10px 10px;
-	
+	background: url('~src/images/userProfile/subscribe.svg') no-repeat 10px 10px;
+
 	${is('isSubscribed')`
-		background: url('/images/userProfile/subscribed.svg') no-repeat 9px 10px;
+		background: url('~src/images/userProfile/subscribed.svg') no-repeat 9px 10px;
 	`}
 	
 	${is('changeSubscribe')`

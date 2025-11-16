@@ -143,7 +143,7 @@ class Wallet extends React.Component {
           <div className="body_wallet">
             <WidgetToken
               background={{
-                image: '/images/wallet/steem.png',
+                image: (process.env.PUBLIC_URL || '') + '/images/wallet/steem.png',
                 color: 'rgb(74, 144, 226)'
               }}
               fullName={isGolosService ? 'ГОЛОС' : 'STEEM'}
@@ -154,23 +154,23 @@ class Wallet extends React.Component {
               actions={isGolosService ?
                 [{
                   label: 'Transfer',
-                  icon: '/images/wallet/buttons/transfer.svg',
+                  icon: (process.env.PUBLIC_URL || '') + '/images/wallet/buttons/transfer.svg',
                   onClick: this.transferSteem
                 }] :
                 [{
                   label: 'Transfer',
-                  icon: '/images/wallet/buttons/transfer.svg',
+                  icon: (process.env.PUBLIC_URL || '') + '/images/wallet/buttons/transfer.svg',
                   onClick: this.transferSteem
                 }, {
                   label: 'Power up',
-                  icon: '/images/wallet/buttons/powerUp.svg',
+                  icon: (process.env.PUBLIC_URL || '') + '/images/wallet/buttons/powerUp.svg',
                   onClick: this.powerUp
                 }]
               }
             />
             <WidgetToken
               background={{
-                image: '/images/wallet/sp.png',
+                image: (process.env.PUBLIC_URL || '') + '/images/wallet/sp.png',
                 color: 'rgb(103, 184, 47)'
               }}
               fullName={isGolosService ? 'СИЛА ГОЛОСА' : 'STEEM POWER'}
@@ -181,23 +181,23 @@ class Wallet extends React.Component {
               actions={isGolosService ? [] :
                 [{
                   label: 'Power up',
-                  icon: '/images/wallet/buttons/powerUp.svg',
+                  icon: (process.env.PUBLIC_URL || '') + '/images/wallet/buttons/powerUp.svg',
                   onClick: this.powerUp
                 },
                 isPoweringDown ? {
                   label: 'Cancel power down',
-                  icon: '/images/wallet/buttons/cancelPowerDown.png',
+                  icon: (process.env.PUBLIC_URL || '') + '/images/wallet/buttons/cancelPowerDown.png',
                   onClick: this.cancelPowerDown
                 } : {
                   label: 'Power down',
-                  icon: '/images/wallet/buttons/powerDown.svg',
+                  icon: (process.env.PUBLIC_URL || '') + '/images/wallet/buttons/powerDown.svg',
                   onClick: this.powerDown
                 }]
               }
             />
             <WidgetToken
               background={{
-                image: '/images/wallet/sbd.png',
+                image: (process.env.PUBLIC_URL || '') + '/images/wallet/sbd.png',
                 color: 'rgb(218, 146, 44)'
               }}
               fullName={isGolosService ? 'ЗОЛОТОЙ' : 'STEEM DOLLARS'}

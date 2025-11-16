@@ -22,9 +22,9 @@
     width: 100%;
     height: 4px;
     vertical-align: initial;
-    background: url(/images/postContextMenu/post-menu-btns.svg) center no-repeat;
+    background: url(src/images/postContextMenu/post-menu-btns.svg) center no-repeat;
 }
 
 .container_post-men-but:hover .shape_post-men-but {
-    background: url(/images/postContextMenu/shape-copy-3.svg) center no-repeat;
+    background: url(src/images/postContextMenu/shape-copy-3.svg) center no-repeat;
 }
