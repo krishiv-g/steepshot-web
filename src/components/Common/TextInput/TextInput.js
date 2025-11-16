@@ -1,7 +1,7 @@
 import React from 'react';
 import Utils from '../../../utils/Utils';
 import ShowIf from '../ShowIf';
-import {ReactResizeDetector} from 'react-resize-detector';
+import ReactResizeDetector from 'react-resize-detector';
 import {connect} from 'react-redux';
 import {
 	blurredTextInput,

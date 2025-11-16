@@ -31,7 +31,7 @@
     "react-player": "^2.16.0",
     "react-rangeslider": "^2.2.0",
     "react-redux": "^9.2.0",
-    "react-resize-detector": "^12.0.0",
+    "react-resize-detector": "^8.1.0",
     "react-router-dom": "^6.28.0",
     "react-share": "^5.2.2",
     "redux": "^5.0.1",

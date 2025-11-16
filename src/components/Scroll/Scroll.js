@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Scrollbars} from 'react-custom-scrollbars';
-import {ReactResizeDetector} from 'react-resize-detector';
+import ReactResizeDetector from 'react-resize-detector';
 import {shouldFetch} from '../../actions/scroll';
 import './scroll.css';
 
