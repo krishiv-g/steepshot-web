@@ -9,11 +9,11 @@
 }
 
 .btn-flag_flag::before {
-    content: url('../../images/flagFalse.svg');
+    content: url('../../../../images/flagFalse.svg');
 }
 
 .btn-flag_flag.marked::before {
-    content: url('../../images/flagTrue.svg');
+    content: url('../../../../images/flagTrue.svg');
 }
 
 .btn-flag_flag.loading::before {
