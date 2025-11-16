@@ -42,28 +42,28 @@
 }
 
 .link-appstore_footer {
-    background: url('src/images/footer/apple_ico.svg') center no-repeat;
+    background: url('../../images/footer/apple_ico.svg') center no-repeat;
     background-size: cover;
     width: 24px;
     height: 24px;
 }
 
 .link-googleplay_footer {
-    background: url('src/images/footer/googleplay_ico.png') center no-repeat;
+    background: url('../../images/footer/googleplay_ico.png') center no-repeat;
     background-size: cover;
     width: 24px;
     height: 24px;
 }
 
 .link-telegram_footer {
-    background: url('src/images/footer/telegram_ico.svg') center no-repeat;
+    background: url('../../images/footer/telegram_ico.svg') center no-repeat;
     background-size: cover;
     width: 24px;
     height: 24px;
 }
 
 .link-discord_footer {
-    background: url('src/images/footer/discord_ico.png') center no-repeat;
+    background: url('../../images/footer/discord_ico.png') center no-repeat;
     background-size: cover;
     width: 24px;
     height: 24px;

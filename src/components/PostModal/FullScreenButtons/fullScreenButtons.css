@@ -36,25 +36,25 @@
 .escape-img_fsf {
     width: 26px;
     height: 22px;
-    background: url(src/images/esc.svg);
+    background: url(../../../images/esc.svg);
 }
 
 .like-img_fsf {
     width: 46px;
     height: 22px;
-    background: url(src/images/enter.svg);
+    background: url(../../../images/enter.svg);
 }
 
 .arrow-left-img_fsf {
     width: 22px;
     height: 22px;
-    background: url(src/images/arrow-left.svg);
+    background: url(../../../images/arrow-left.svg);
 }
 
 .arrow-right-img_fsf {
     width: 22px;
     height: 22px;
-    background: url(src/images/arrow-right.svg);
+    background: url(../../../images/arrow-right.svg);
 }
 
 .post__image-container .buttons-wrapper_fsf {

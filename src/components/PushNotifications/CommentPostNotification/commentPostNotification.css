@@ -2,7 +2,7 @@
     position: absolute;
     width: 16px;
     height: 16px;
-    background: url('src/images/comment_notification.svg') center no-repeat;
+    background: url('../../../images/comment_notification.svg') center no-repeat;
     bottom: -1px;
     left: -6px;
 }

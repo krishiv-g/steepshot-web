@@ -18,7 +18,7 @@ a.feed-browse-active_header {
 }
 
 .search-mob-ico_search:hover {
-    background: url('src/images/sprite_svg1910.svg') 12% 76.7% no-repeat;
+    background: url('../../images/sprite_svg1910.svg') 12% 76.7% no-repeat;
 }
 
 .wrap-controls_header {
@@ -27,7 +27,7 @@ a.feed-browse-active_header {
 
 @media (max-width: 1024px) {
     .search-mob-ico_search {
-        background: url('src/images/sprite_svg1910.svg') 12% 71% no-repeat;
+        background: url('../../images/sprite_svg1910.svg') 12% 71% no-repeat;
         display: block;
         width: 21px;
         height: 20px;

@@ -24,7 +24,7 @@
     cursor: pointer;
     border-top: 1px solid #f4f4f6;
     height: 50px;
-    background: url('src/images/comment_arrow.svg') 100% 50% no-repeat;
+    background: url('../../../images/comment_arrow.svg') 100% 50% no-repeat;
     margin: 0 20px;
 }
 
@@ -98,7 +98,7 @@
     height: 16px;
     top: 10px;
     right: 10px;
-    background: url('src/images/post/gallery-indicator.svg') center no-repeat;
+    background: url('../../../images/post/gallery-indicator.svg') center no-repeat;
     cursor: pointer;
 }
 
@@ -108,7 +108,7 @@
     height: 16px;
     top: 10px;
     right: 10px;
-    background: url('src/images/post/gif.svg') center no-repeat;
+    background: url('../../../images/post/gif.svg') center no-repeat;
     cursor: pointer;
 }
 
@@ -130,7 +130,7 @@
     height: 16px;
     top: 10px;
     right: 10px;
-    background: url('src/images/post/video.svg') center no-repeat;
+    background: url('../../../images/post/video.svg') center no-repeat;
     cursor: pointer;
 }
 

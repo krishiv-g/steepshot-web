@@ -17,7 +17,7 @@
     display: block;
     padding: 0;
     border: none;
-    background: url('src/images/sprite_svg1910.svg') 7% 38% no-repeat;
+    background: url('../../images/sprite_svg1910.svg') 7% 38% no-repeat;
 }
 
 .btn-like-inactive_vote {
@@ -32,15 +32,15 @@
 }
 
 .comment-not-liked_vote {
-    background: url('src/images/sprite_svg1910.svg') 7% 32.5% no-repeat;
+    background: url('../../images/sprite_svg1910.svg') 7% 32.5% no-repeat;
 }
 
 .comment-liked_vote {
-    background: url('src/images/sprite_svg1910.svg') 7% 27% no-repeat;
+    background: url('../../images/sprite_svg1910.svg') 7% 27% no-repeat;
 }
 
 .btn-like_vote.liked_vote, .comment.btn-like_vote.liked_vote {
-    background: url('src/images/sprite_svg1910.svg') 7% 43.5% no-repeat;
+    background: url('../../images/sprite_svg1910.svg') 7% 43.5% no-repeat;
 }
 
 .btn-like-wrapper_vote:hover .btn-like_vote, .btn-like-wrapper-comment_vote:hover .comment.btn-like_vote {
@@ -51,7 +51,7 @@
     content: ' ';
     position: absolute;
     top: 11px;
-    background: url('src/images/sprite_svg1910.svg') 7% 27% no-repeat;
+    background: url('../../images/sprite_svg1910.svg') 7% 27% no-repeat;
     height: 21px;
     width: 23px;
 }
@@ -60,14 +60,14 @@
     content: ' ';
     position: absolute;
     top: 0;
-    background: url('src/images/sprite_svg1910.svg') 7% 27% no-repeat;
+    background: url('../../images/sprite_svg1910.svg') 7% 27% no-repeat;
     height: 21px;
     width: 23px;
 }
 
 .btn-like_vote.loading_vote, .comment.btn-like_vote.loading_vote {
     display: block;
-    background: url('src/images/sprite_svg1910.svg') 7% 43.5% no-repeat;
+    background: url('../../images/sprite_svg1910.svg') 7% 43.5% no-repeat;
     animation: likeLoading 1s infinite linear;
 }
 

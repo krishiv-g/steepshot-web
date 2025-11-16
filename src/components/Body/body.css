@@ -32,13 +32,13 @@
 }
 
 .search-empty-request-error_body {
-    background: url('src/images/tabsBar/lighthouse-background.png') center no-repeat;
+    background: url('../../images/tabsBar/lighthouse-background.png') center no-repeat;
     background-size: cover;
 }
 
 @media (max-width: 570px) {
     .search-empty-request-error_body {
-        background: url('src/images/tabsBar/lighthouse-background.png') center bottom no-repeat;
+        background: url('../../images/tabsBar/lighthouse-background.png') center bottom no-repeat;
         background-size: 100vw;
     }
 }

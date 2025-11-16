@@ -19,13 +19,13 @@
 
 .left-arrow_img-gallery {
     left: 10px;
-    background: url('src/images/arrow-next-gallery.svg') center no-repeat;
+    background: url('../../images/arrow-next-gallery.svg') center no-repeat;
     transform: translateY(-50%) rotate(180deg);
 }
 
 .right-arrow_img-gallery {
     right: 10px;
-    background: url('src/images/arrow-next-gallery.svg') center no-repeat;
+    background: url('../../images/arrow-next-gallery.svg') center no-repeat;
     transform: translateY(-50%);
 }
 
