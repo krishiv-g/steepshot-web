@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  # Development server with hot reload
+  steepshot-dev:
+    build:
+      context: .
+      target: development
+      dockerfile: Dockerfile
+    container_name: steepshot-web-dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
+    stdin_open: true
+    tty: true
+    networks:
+      - steepshot-network
+    restart: unless-stopped
+
+  # Production server
+  steepshot-prod:
+    build:
+      context: .
+      target: production
+      dockerfile: Dockerfile
+    container_name: steepshot-web-prod
+    ports:
+      - "3001:3000"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - steepshot-network
+    restart: unless-stopped
+    profiles:
+      - production
+
+networks:
+  steepshot-network:
+    driver: bridge

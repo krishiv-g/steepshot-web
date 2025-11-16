@@ -17,7 +17,7 @@ import Likes from './Likes/Likes';
 import './post.css';
 import ReactPlayer from 'react-player';
 import MarkdownParser from '../../../utils/markdownParser';
-import renderHTML from 'react-render-html';
+import SafeHtml from '../../Common/SafeHtml/SafeHtml';
 import ImagesService from '../../../services/ImagesService';
 import PostImgBackground from './PostImgBackground';
 import ChainService from '../../../services/ChainService';
@@ -193,7 +193,7 @@ class Post extends React.Component {
 								</div>
 							</div>
 							<div className="card-preview_post">
-								{renderHTML(MarkdownParser.parseTitle(this.props.title))}
+								<SafeHtml html={MarkdownParser.parseTitle(this.props.title)} />
 								<Tags tags={this.props.tags}/>
 							</div>
 							<div className="number-of-comments_post" onClick={this.openPostModal.bind(this)}>

@@ -5,7 +5,7 @@ import './login.css';
 import ShowIf from '../Common/ShowIf';
 import {login} from '../../actions/auth';
 import ImageGallery from './ImageGallery/ImageGallery';
-import {push} from 'react-router-redux';
+import {push} from '../../utils/react-router-redux-shim';
 import Constants from '../../common/constants';
 import {switchService} from '../../actions/services';
 import {clearLoginErrors} from '../../actions/login';

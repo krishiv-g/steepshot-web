@@ -5,7 +5,7 @@ import configureStore from './store/configureStore';
 import getRoutes, {getServerRouter} from './routes';
 import createMemoryHistory from 'history/createMemoryHistory';
 import createBrowserHistory from 'history/createBrowserHistory';
-import {ConnectedRouter} from 'react-router-redux';
+import {ConnectedRouter} from '../../utils/react-router-redux-shim';
 import './styles/main.css';
 import './styles/app.css';
 

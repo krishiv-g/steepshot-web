@@ -4,7 +4,7 @@ import Constants from '../../common/constants';
 import Avatar from '../Common/Avatar/Avatar';
 import PostsList from '../PostsList/PostsList';
 import UsersList from '../UsersList/UsersList';
-import {push, replace} from 'react-router-redux';
+import {push, replace} from '../../utils/react-router-redux-shim';
 import TabsBar from '../Common/TabsBar/TabsBar';
 import Tab from '../Common/TabsBar/Tab/Tab';
 import {getUserProfile, setUserProfileLoading} from '../../actions/userProfile';
@@ -14,7 +14,7 @@ import './userProfile.css';
 import {setActiveIndex} from '../../actions/tabsBar';
 import Follow from '../Follow/Follow';
 import AuthService from '../../services/AuthService';
-import renderHTML from 'react-render-html';
+import SafeHtml from '../Common/SafeHtml/SafeHtml';
 import MarkdownParser from '../../utils/markdownParser';
 
 class UserProfile extends React.Component {
@@ -64,7 +64,7 @@ class UserProfile extends React.Component {
 								<div className="name">{name}</div>
 								<div className="location">{location}</div>
 								<p
-									className="word-wrap_brake-word">{renderHTML(MarkdownParser.parseTitle(this.props.profile.about))}</p>
+									className="word-wrap_brake-word"><SafeHtml html={MarkdownParser.parseTitle(this.props.profile.about)} /></p>
 								<p className="break--word">
 									<a className="website_use-pro" href={website} target="_blank">{website}</a>
 								</p>

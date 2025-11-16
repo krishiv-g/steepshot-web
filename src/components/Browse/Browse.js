@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {documentTitle} from '../../utils/documentTitle';
 import PostsList from '../PostsList/PostsList';
-import {push, replace} from 'react-router-redux';
+import {push, replace} from '../../utils/react-router-redux-shim';
 import TabsBar from '../Common/TabsBar/TabsBar';
 import Tab from '../Common/TabsBar/Tab/Tab';
 import {setActiveIndex} from '../../actions/tabsBar';

@@ -6,7 +6,7 @@ import ShowIf from '../../Common/ShowIf';
 import PromoteModal from '../../Modals/Promote/Promote';
 import {openModal} from '../../../actions/modal';
 import MarkdownParser from '../../../utils/markdownParser';
-import renderHTML from 'react-render-html';
+import SafeHtml from '../../Common/SafeHtml/SafeHtml';
 import ChainService from '../../../services/ChainService';
 
 class Description extends React.Component {
@@ -39,10 +39,10 @@ class Description extends React.Component {
 						PROMOTE THIS POST
 					</div>
 				</ShowIf>
-				<p className="word-wrap_brake-word">{renderHTML(MarkdownParser.parseTitle(this.props.title))}</p>
+				<p className="word-wrap_brake-word"><SafeHtml html={MarkdownParser.parseTitle(this.props.title)} /></p>
 				<div className={(this.state.isDescriptionOpened || (this.props.description.length < 140))
 					? 'collapse-opened' : 'collapse-closed'}>
-					{renderHTML(MarkdownParser.parse(this.props.description))}
+					<SafeHtml html={MarkdownParser.parse(this.props.description)} />
 					<Tags tags={this.props.tags}/>
 					<a className="lnk-more" onClick={this.openDescription.bind(this)}>Show more</a>
 				</div>

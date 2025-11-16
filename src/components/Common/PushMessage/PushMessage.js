@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import renderHTML from 'react-render-html';
+import SafeHtml from '../SafeHtml/SafeHtml';
 import './pushMessage.css';
 
 class PushMessage extends React.Component {
@@ -17,7 +17,7 @@ class PushMessage extends React.Component {
 			     style={{marginBottom: message.up ? 0 : -200}}
 			>
 				<div className="text-wrap_push-msg">
-					{renderHTML(message.message)}
+					<SafeHtml html={message.message} />
 				</div>
 			</div>
 		);

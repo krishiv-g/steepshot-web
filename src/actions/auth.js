@@ -1,4 +1,4 @@
-import {push} from 'react-router-redux';
+import {push} from '../../utils/react-router-redux-shim';
 import {pushErrorMessage, pushMessage} from './pushMessage';
 import {hideBodyLoader, showBodyLoader} from './bodyLoader';
 import {checkSubscribeAndUpdateSettings, removeSettings} from './settings';

@@ -1,7 +1,7 @@
 import React from 'react';
 import {updateSettings} from '../../actions/settings';
 import {connect} from 'react-redux';
-import {goBack} from 'react-router-redux';
+import {goBack} from '../../utils/react-router-redux-shim';
 import './settings.css';
 import Constants from '../../common/constants';
 import SettingsField from './SettingsField/SettingsField';

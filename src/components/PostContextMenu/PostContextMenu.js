@@ -8,7 +8,7 @@ import {copyToClipboard} from '../../actions/clipboard';
 import {closeAllModals, closeModal, openModal} from '../../actions/modal';
 import {deletePost} from '../../actions/post';
 import './postContextMenu.css';
-import {push} from 'react-router-redux';
+import {push} from '../../utils/react-router-redux-shim';
 import {pushMessage} from '../../actions/pushMessage';
 import Constants from '../../common/constants';
 import AuthService from '../../services/AuthService';

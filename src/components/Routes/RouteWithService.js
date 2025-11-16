@@ -1,63 +1,43 @@
-import React from 'react';
-import {Route} from 'react-router-dom';
+import React, {useEffect} from 'react';
+import {useLocation, useNavigate} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {replace} from 'react-router-redux';
-import Utils from '../../utils/Utils';
 import Constants from '../../common/constants';
 import {setService} from '../../actions/services';
-import AuthService from '../../services/AuthService';
 
-class RouteWithService extends React.Component {
+/**
+ * RouteWithService - Wrapper component that handles service (steem/golos) routing
+ * Updated for React Router v6 with hooks
+ */
+const RouteWithService = ({children, serviceName, setService: setServiceAction}) => {
+	const location = useLocation();
+	const navigate = useNavigate();
+	const pathname = location.pathname;
 
-	constructor(props) {
-		super();
-		if (!props.pathname) {
-			return;
+	useEffect(() => {
+		// Set service based on URL
+		if (pathname.includes('/' + Constants.SERVICES.golos.name)) {
+			setServiceAction(Constants.SERVICES.golos.name);
+		} else if (serviceName === Constants.SERVICES.golos.name) {
+			// If service is golos but not in URL, redirect
+			navigate('/golos' + pathname, { replace: true });
 		}
-		if (props.pathname.includes('/' + Constants.SERVICES.golos.name)) {
-			props.setService(Constants.SERVICES.golos.name);
-		}
-		if (!props.pathname.includes('/' + Constants.SERVICES.golos.name)
-			&& props.serviceName === Constants.SERVICES.golos.name) {
-			props.historyReplace('/golos' + props.pathname);
-		}
-	}
+	}, [pathname, serviceName, setServiceAction, navigate]);
 
-	componentWillReceiveProps(nextProps) {
-		if (!Utils.equalsObjects(nextProps.pathname, this.props.pathname)
-			&& nextProps.serviceName === Constants.SERVICES.golos.name
-			&& !nextProps.pathname.includes('/' + Constants.SERVICES.golos.name)) {
-			this.props.historyReplace('/golos' + nextProps.pathname);
-		}
-	}
+	return <>{children}</>;
+};
 
-	render() {
-		const Component = this.props.component;
-		return (
-			<Route path={this.props.path} render={props => <Component {...props}/>}/>
-		);
-	}
-
-}
-
-const mapStateToProps = (state, props) => {
-	const location = state.router.location || props.location || {};
+const mapStateToProps = (state) => {
 	return {
-		isAuthenticated: AuthService.isAuth(),
-		pathname: location.pathname,
 		serviceName: state.services.name
 	}
 };
 
-const mapDispatchTOProps = dispatch => {
+const mapDispatchToProps = dispatch => {
 	return {
-		historyReplace: newPath => {
-			dispatch(replace(newPath))
-		},
 		setService: serviceName => {
 			dispatch(setService(serviceName));
 		}
 	}
 };
 
-export default connect(mapStateToProps, mapDispatchTOProps)(RouteWithService);
+export default connect(mapStateToProps, mapDispatchToProps)(RouteWithService);

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Redirect, Route, Switch} from 'react-router-dom';
+import {Navigate, Route, Routes} from 'react-router-dom';
 import App from './components/App';
 import NotFound from './components/NotFound/NotFound';
 import PrivateRoute from './components/Routes/PrivateRoute';
@@ -29,30 +29,30 @@ import NotFoundSeverPage from './serverPages/NotFoundSeverPage';
 export default function getRoutes() {
 	return (
 		<App>
-			<Switch>
-				<Route exact path="/" render={() => <Redirect to="/browse"/>}/>
-				<Route exact path="/steemConnect" component={SteemConnect}/>
-				<Route exact path="/signin" render={() => (
+			<Routes>
+				<Route path="/" element={<Navigate to="/browse" replace />} />
+				<Route path="/steemConnect" element={<SteemConnect />} />
+				<Route path="/signin" element={
 					AuthService.isAuth() ? (
-						<Redirect push to="/feed"/>
+						<Navigate to="/feed" replace />
 					) : (
 						<Login/>
 					)
-				)}/>
-				<Route path="/guide" component={About}/>
-				<Route path="/dev/test" component={Testing}/>
-				<RouteWithService path="/:service(golos)?/browse/:filter?" component={Browse}/>
-				<RouteWithService path="/:service(golos)?/post" component={SinglePost}/>
-				<RouteWithService path="/:service(golos)?/@:username" component={UserProfile}/>
-				<RouteWithService path="/:service(golos)?/search/:searchValue" component={Search}/>
-				<PrivateRoute path="/:service(golos)?/feed" component={Feed}/>
-				<Redirect path="/createPost" to='/editPost'/>
-				<PrivateRoute path="/:service(golos)?/editPost/:category?/:username?/:permlink?" component={EditPost}/>
-				<PrivateRoute path="/:service(golos)?/Profile" component={UserProfile}/>
-				<PrivateRoute path="/:service(golos)?/settings" component={Settings}/>
-				<PrivateRoute path="/:service(golos)?/wallet" component={Wallet}/>
-				<Route path="*" component={NotFound}/>
-			</Switch>
+				} />
+				<Route path="/guide" element={<About />} />
+				<Route path="/dev/test" element={<Testing />} />
+				<Route path="/:service?/browse/:filter?" element={<RouteWithService><Browse /></RouteWithService>} />
+				<Route path="/:service?/post" element={<RouteWithService><SinglePost /></RouteWithService>} />
+				<Route path="/:service?/@:username" element={<RouteWithService><UserProfile /></RouteWithService>} />
+				<Route path="/:service?/search/:searchValue" element={<RouteWithService><Search /></RouteWithService>} />
+				<Route path="/:service?/feed" element={<PrivateRoute><Feed /></PrivateRoute>} />
+				<Route path="/createPost" element={<Navigate to="/editPost" replace />} />
+				<Route path="/:service?/editPost/:category?/:username?/:permlink?" element={<PrivateRoute><EditPost /></PrivateRoute>} />
+				<Route path="/:service?/Profile" element={<PrivateRoute><UserProfile /></PrivateRoute>} />
+				<Route path="/:service?/settings" element={<PrivateRoute><Settings /></PrivateRoute>} />
+				<Route path="/:service?/wallet" element={<PrivateRoute><Wallet /></PrivateRoute>} />
+				<Route path="*" element={<NotFound />} />
+			</Routes>
 		</App>
 	);
 }
@@ -60,19 +60,19 @@ export default function getRoutes() {
 
 export function getServerRouter() {
 	return (
-		<Switch>
-			<Route exact path="/" component={BrowseServerPage}/>
-			<RouteWithService path="/:service(golos)?/browse/:filter?" component={BrowseServerPage}/>
-			<Route exact path="/:service(golos)?/feed" component={BrowseServerPage}/>
-			<Route exact path="/signin" component={LoginServerPage}/>
-			<Route path="/guide" component={AboutServerPage}/>
-			<RouteWithService path="/:service(golos)?/post" component={SinglePostServerPage}/>
-			<RouteWithService path="/:service(golos)?/@:username" component={UserProfileServerPage}/>
-			<RouteWithService path="/:service(golos)?/Profile" component={UserProfileServerPage}/>
-			<RouteWithService path="/:service(golos)?/search/:searchValue" component={SearchServerPage}/>
-			<Route path="/createPost" component={EditPostServerPage}/>
-			<RouteWithService path="/:service(golos)?/editPost/:category?/:username?/:permlink?" component={EditPostServerPage}/>
-			<Route path="*" component={NotFoundSeverPage}/>
-		</Switch>
+		<Routes>
+			<Route path="/" element={<BrowseServerPage />} />
+			<Route path="/:service?/browse/:filter?" element={<RouteWithService><BrowseServerPage /></RouteWithService>} />
+			<Route path="/:service?/feed" element={<BrowseServerPage />} />
+			<Route path="/signin" element={<LoginServerPage />} />
+			<Route path="/guide" element={<AboutServerPage />} />
+			<Route path="/:service?/post" element={<RouteWithService><SinglePostServerPage /></RouteWithService>} />
+			<Route path="/:service?/@:username" element={<RouteWithService><UserProfileServerPage /></RouteWithService>} />
+			<Route path="/:service?/Profile" element={<RouteWithService><UserProfileServerPage /></RouteWithService>} />
+			<Route path="/:service?/search/:searchValue" element={<RouteWithService><SearchServerPage /></RouteWithService>} />
+			<Route path="/createPost" element={<EditPostServerPage />} />
+			<Route path="/:service?/editPost/:category?/:username?/:permlink?" element={<RouteWithService><EditPostServerPage /></RouteWithService>} />
+			<Route path="*" element={<NotFoundSeverPage />} />
+		</Routes>
 	)
 }

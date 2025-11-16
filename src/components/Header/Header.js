@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {push} from 'react-router-redux';
+import {push} from '../../utils/react-router-redux-shim';
 import {logout, setUserAuth, updateVotingPower} from '../../actions/auth';
 import Constants from '../../common/constants';
 import Avatar from '../Common/Avatar/Avatar';

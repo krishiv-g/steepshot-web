@@ -1,22 +1,33 @@
-import {applyMiddleware, createStore} from 'redux';
+import {applyMiddleware, legacy_createStore as createStore} from 'redux';
 import thunk from 'redux-thunk';
-import promise from 'redux-promise';
 import {createLogger} from 'redux-logger';
 import rootReducer from '../reducers';
-import {routerMiddleware} from 'react-router-redux';
 
 let storeBase;
 
+// Custom promise middleware to replace redux-promise
+const promiseMiddleware = store => next => action => {
+	if (action && action.payload && typeof action.payload.then === 'function') {
+		return action.payload.then(
+			result => next({...action, payload: result}),
+			error => {
+				next({...action, payload: error, error: true});
+				return Promise.reject(error);
+			}
+		);
+	}
+	return next(action);
+};
+
 export default function configureStore(initialState, history) {
-	const router = routerMiddleware(history);
 	const logger = createLogger({
 		collapsed: true
 	});
 	let middleware;
 	if (process.env.NODE_ENV === 'production') {
-		middleware = applyMiddleware(thunk, promise, router);
+		middleware = applyMiddleware(thunk, promiseMiddleware);
 	} else {
-		middleware = applyMiddleware(thunk, promise, logger, router);
+		middleware = applyMiddleware(thunk, promiseMiddleware, logger);
 	}
 
 	const store = createStore(

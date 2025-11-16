@@ -13,7 +13,7 @@ import ShowIf from '../../Common/ShowIf';
 import Constants from '../../../common/constants';
 import {loadingEllipsis} from '../../../utils/loadingEllipsis';
 import MarkdownParser from '../../../utils/markdownParser';
-import renderHTML from 'react-render-html';
+import SafeHtml from '../../Common/SafeHtml/SafeHtml';
 
 class Comment extends React.Component {
 
@@ -95,7 +95,7 @@ class Comment extends React.Component {
 				</div>
 				<div className="comment-text">
 					<div className="comment-text_comment">
-						{renderHTML(MarkdownParser.parse(this.props.comment.body))}
+						<SafeHtml html={MarkdownParser.parse(this.props.comment.body)} />
 					</div>
 					<Vote postIndex={this.props.point}
 					      powerLikeIndPlace="comment"
