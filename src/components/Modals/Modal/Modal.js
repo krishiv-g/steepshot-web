@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {closeModal, setModalOptions} from '../../../actions/modal';
-import ReactResizeDetector from 'react-resize-detector';
+import {ReactResizeDetector} from 'react-resize-detector';
 import ShowIf from '../../Common/ShowIf';
 import './modal.css';
 
