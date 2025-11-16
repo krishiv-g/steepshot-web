@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stateListAnimator="@null"
+        android:elevation="2dp"
+        android:fitsSystemWindows="true">
+        <include
+            layout="@layout/top_panel" />
+    </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:minHeight="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+        <RelativeLayout
+            android:id="@+id/input_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
+            <RelativeLayout
+                android:id="@+id/btn_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="true">
+                <ImageView
+                    android:id="@+id/btn_post_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_send"
+                    android:background="@drawable/white_radius100dip_edge_grey"
+                    android:scaleType="center" />
+                <ProgressBar
+                    android:id="@+id/send_spinner"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:indeterminateTintMode="src_atop"
+                    android:layout_centerInParent="true"
+                    android:visibility="invisible"
+                    android:indeterminateTint="@color/rgb231_72_0" />
+            </RelativeLayout>
+            <EditText
+                android:id="@+id/text_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/btn_post"
+                android:minHeight="40dp"
+                android:textSize="14sp"
+                android:textColor="@color/rgb15_24_30"
+                android:textColorHint="@color/rgb151_155_158"
+                android:textCursorDrawable="@drawable/ic_input"
+                android:singleLine="false"
+                android:paddingLeft="25dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="20dp"
+                android:maxLines="4" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/edit_controls"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/input_container"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:visibility="gone">
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:minWidth="150dp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/white_btn_style_edge_grey"
+                android:textSize="14sp" />
+            <Button
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:minWidth="150dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/white_btn_style_edge_grey"
+                android:textSize="14sp"
+                android:textColor="@color/rgb255_34_5" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/comments_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/message" />
+    <ProgressBar
+        android:id="@+id/loading_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/rgb15_24_30"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

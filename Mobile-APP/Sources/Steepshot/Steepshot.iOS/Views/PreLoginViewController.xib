@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PreLoginViewController">
+            <connections>
+                <outlet property="activityIndicator" destination="mkj-Fh-o3K" id="u2c-Ov-CpN"/>
+                <outlet property="loginButton" destination="RYY-6q-8ua" id="qqc-dt-kSU"/>
+                <outlet property="loginText" destination="wfV-W1-cp6" id="sFA-OF-3AL"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYY-6q-8ua">
+                    <rect key="frame" x="15" y="259" width="290" height="50"/>
+                    <color key="backgroundColor" red="1" green="0.086274509799999996" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="36w-sL-wgI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                    <state key="normal" title="Next step">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Account name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wfV-W1-cp6">
+                    <rect key="frame" x="15" y="189" width="290" height="40"/>
+                    <color key="tintColor" red="0.90588235294117647" green="0.28235294117647058" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Sbg-PN-hBh"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39W-Nt-549">
+                    <rect key="frame" x="15" y="229" width="290" height="1"/>
+                    <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Dg3-m7-YqI"/>
+                    </constraints>
+                </view>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mkj-Fh-o3K">
+                    <rect key="frame" x="150" y="274" width="20" height="20"/>
+                    <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="wfV-W1-cp6" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="15" id="5dv-qu-HFp"/>
+                <constraint firstAttribute="trailing" secondItem="wfV-W1-cp6" secondAttribute="trailing" constant="15" id="Erf-Ja-owS"/>
+                <constraint firstAttribute="trailing" secondItem="39W-Nt-549" secondAttribute="trailing" constant="15" id="JKo-Hx-rFh"/>
+                <constraint firstItem="RYY-6q-8ua" firstAttribute="centerY" secondItem="2" secondAttribute="centerY" id="PFy-Zm-buj"/>
+                <constraint firstItem="39W-Nt-549" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="15" id="QOo-Wr-Z7m"/>
+                <constraint firstAttribute="trailing" secondItem="RYY-6q-8ua" secondAttribute="trailing" constant="15" id="Xix-g8-fTp"/>
+                <constraint firstItem="39W-Nt-549" firstAttribute="top" secondItem="wfV-W1-cp6" secondAttribute="bottom" id="c1H-5g-ZZC"/>
+                <constraint firstItem="mkj-Fh-o3K" firstAttribute="centerY" secondItem="RYY-6q-8ua" secondAttribute="centerY" id="qKo-Cu-fNw"/>
+                <constraint firstItem="RYY-6q-8ua" firstAttribute="top" secondItem="39W-Nt-549" secondAttribute="bottom" constant="29" id="yh0-co-jaL"/>
+                <constraint firstItem="mkj-Fh-o3K" firstAttribute="centerX" secondItem="RYY-6q-8ua" secondAttribute="centerX" id="ziZ-7F-NmK"/>
+                <constraint firstItem="RYY-6q-8ua" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="15" id="zsG-MG-78j"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

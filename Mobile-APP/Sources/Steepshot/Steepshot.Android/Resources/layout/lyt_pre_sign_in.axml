@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:paddingTop="30dp">
+    <include
+        layout="@layout/top_panel" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_centerInParent="true">
+        <EditText
+            android:id="@+id/input_username"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:maxLength="16"
+            android:gravity="center"
+            android:inputType="textNoSuggestions"
+            android:textCursorDrawable="@drawable/ic_input"
+            android:background="@android:color/transparent"
+            android:imeOptions="actionDone"
+            android:hint="Account name"
+            android:textSize="14sp"
+            android:textColor="@color/rgb15_24_30"
+            android:textColorHint="@color/rgb151_155_158" />
+        <View
+            android:id="@+id/devider_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/input_username"
+            android:background="@color/rgb244_244_246" />
+        <RelativeLayout
+            android:id="@+id/sign_in_cont"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/input_username_layout"
+            android:layout_marginTop="50dp">
+            <Button
+                android:id="@+id/pre_sign_in_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Next step"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:background="@drawable/orange_btn_style" />
+            <ProgressBar
+                android:id="@+id/loading_spinner"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="@color/white"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:elevation="10dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

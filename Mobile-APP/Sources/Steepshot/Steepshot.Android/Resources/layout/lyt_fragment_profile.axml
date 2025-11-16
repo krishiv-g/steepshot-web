@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+    <android.support.design.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cl_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stateListAnimator="@null"
+            android:elevation="2dp"
+            android:fitsSystemWindows="true">
+            <include
+                layout="@layout/top_panel" />
+        </android.support.design.widget.AppBarLayout>
+        <RelativeLayout
+            android:id="@+id/list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/refresher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/posts_list"
+                    android:clipToPadding="false" />
+            </android.support.v4.widget.SwipeRefreshLayout>
+            <ProgressBar
+                android:id="@+id/list_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="@color/rgb15_24_30"
+                android:layout_marginBottom="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>
+    <Button
+        android:id="@+id/first_post"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        android:background="@drawable/blue_btn_style"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="52dp"
+        android:textSize="14sp"
+        android:layout_alignParentBottom="true"
+        android:text="Create first photo" />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/post_prev_pager"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+    <ProgressBar
+        android:id="@+id/loading_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/rgb15_24_30"
+        android:layout_centerInParent="true" />
+    <TextView
+        android:id="@+id/like_power"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+        android:background="@drawable/like_power_bg" />
+</RelativeLayout>
