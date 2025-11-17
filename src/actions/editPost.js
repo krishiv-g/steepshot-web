@@ -3,7 +3,7 @@ import {clearTextInputState, setTextInputError} from './textInput';
 import React from 'react';
 import PlagiarismTracking from '../components/Modals/PlagiarismTracking/PlagiarismTracking';
 import {openModal} from './modal';
-import {push} from '../../utils/react-router-redux-shim';
+import {push} from '../utils/react-router-redux-shim';
 import {compressJPEG} from '../utils/compressor';
 import {pushErrorMessage, pushMessage} from './pushMessage';
 import Constants from '../common/constants';

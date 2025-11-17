@@ -1,4 +1,4 @@
-import {push} from '../../utils/react-router-redux-shim';
+import {push} from '../utils/react-router-redux-shim';
 import {hideBodyLoader, showBodyLoader} from './bodyLoader';
 import LoggingService from '../services/LoggingService';
 import ChainService from '../services/ChainService';
