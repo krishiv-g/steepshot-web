@@ -4,7 +4,7 @@ import {WrapperProvider} from 'create-react-server/wrapper';
 import configureStore from './store/configureStore';
 import getRoutes, {getServerRouter} from './routes';
 import {createMemoryHistory, createBrowserHistory} from 'history';
-import {ConnectedRouter} from '../../utils/react-router-redux-shim';
+import {ConnectedRouter} from './utils/react-router-redux-shim';
 import './styles/main.css';
 import './styles/app.css';
 
