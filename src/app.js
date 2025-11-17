@@ -3,16 +3,13 @@ import {Provider} from 'react-redux';
 import {WrapperProvider} from 'create-react-server/wrapper';
 import configureStore from './store/configureStore';
 import getRoutes, {getServerRouter} from './routes';
-import {createMemoryHistory, createBrowserHistory} from 'history';
-import {ConnectedRouter} from './utils/react-router-redux-shim';
+import {BrowserRouter} from 'react-router-dom';
 import './styles/main.css';
 import './styles/app.css';
 
 export default ({state, props}) => {
 
-	let history = (global.isServerSide) ? createMemoryHistory() : createBrowserHistory();
-
-	const store = configureStore(state, history);
+	const store = configureStore(state);
 
 	if (global.isServerSide) {
 		return (
@@ -26,9 +23,9 @@ export default ({state, props}) => {
 
 	return (
 		<Provider store={store}>
-			<ConnectedRouter history={history}>
+			<BrowserRouter>
 				{getRoutes()}
-			</ConnectedRouter>
+			</BrowserRouter>
 		</Provider>
 	)
 };
