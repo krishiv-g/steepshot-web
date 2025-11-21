@@ -1,4 +1,4 @@
-import {render} from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import React from 'react';
 import './styles/main.css';
 import createApp from './app';
@@ -13,7 +13,9 @@ const Root = () => (
 	createApp({state: window['__INITIAL__STATE__'], props: window['__INITIAL__PROPS__']})
 );
 
-render((<Root/>), document.getElementById('root'));
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(<Root />);
 
 if (module.hot) module.hot.accept();
 
